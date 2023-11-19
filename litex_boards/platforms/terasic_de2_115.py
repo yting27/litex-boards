@@ -34,8 +34,12 @@ _io = [
         Subsignal("we_n",  Pins("V6")),
         Subsignal("dq", Pins(
             "W3 W2  V4  W1  V3  V2  V1  U3",
-            "Y3 Y4 AB1 AA3 AB2 AC1 AB3 AC2")),
-        Subsignal("dm", Pins("U2 W4")),
+            "Y3 Y4 AB1 AA3 AB2 AC1 AB3 AC2",
+            ## Added by yentingn to support large memory
+            "M8 L8 P2   N3  N4  M4  M7  L7", 
+            "U5 R7 R1   R2  R3  T3  U4  U1")),
+            ## Added by yentingn to DQM[2], DQM[3]
+        Subsignal("dm", Pins("U2 W4 K8 N8")),
         IOStandard("3.3-V LVTTL")
     ),
 ]
